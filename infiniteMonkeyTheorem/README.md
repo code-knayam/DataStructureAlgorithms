@@ -11,3 +11,5 @@ A third function will repeatedly call generate and score, then if 100% of the le
 ## Level 2
 
 See if you can improve upon the program in the self check by keeping letters that are correct and only modifying one character in the best string so far. This is a type of algorithm in the class of ‘hill climbing’ algorithms, that is we only keep the result if it is better than the previous one.
+
+> python3 game.py

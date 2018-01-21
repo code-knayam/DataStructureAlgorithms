@@ -11,29 +11,29 @@ def generator(beststring, goal):
     alphabets = "abcdefghijklmnopqrstuvwxyz "
     res = ""
     if beststring != "":
-        for i in range(28):
+        for i in range(len(goal)):
             if best_character(beststring, goal, i):
                 res = res + beststring[i]
             else:
                 res = res + alphabets[random.randrange(27)]                
     else:
-        for i in range(28):        
+        for i in range(len(goal)):        
             res = res + alphabets[random.randrange(27)]
 
     return res
 
 def scorer(goal, teststring):
     score = 0
-    for i in range(28):
+    for i in range(len(goal)):
         if goal[i] == teststring[i]:
             score = score + 1
-    return score/28
+    return score/len(goal)
 
 def game():
     goal = "methinks it is like a weasel"
     beststring = ""
     bestscore = 0
-    newstring = generator(beststring, 28)
+    newstring = generator(beststring, goal)
     score = scorer(goal, newstring)
     times = 1
     while score < 1:
