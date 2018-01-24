@@ -1,3 +1,5 @@
+# pylint: disable=missing-docstring
+from __future__ import print_function
 import random
 
 def best_character(beststring, goal, i):
@@ -6,25 +8,26 @@ def best_character(beststring, goal, i):
     else:
         return False
 
-
 def generator(beststring, goal):
     alphabets = "abcdefghijklmnopqrstuvwxyz "
     res = ""
+    leng = len(goal)
     if beststring != "":
-        for i in range(len(goal)):
+        for i in range(leng):
             if best_character(beststring, goal, i):
                 res = res + beststring[i]
             else:
-                res = res + alphabets[random.randrange(27)]                
+                res = res + alphabets[random.randrange(27)]
     else:
-        for i in range(len(goal)):        
+        for i in range(leng):
             res = res + alphabets[random.randrange(27)]
 
     return res
 
 def scorer(goal, teststring):
     score = 0
-    for i in range(len(goal)):
+    leng = len(goal)
+    for i in range(leng):
         if goal[i] == teststring[i]:
             score = score + 1
     return score/len(goal)
