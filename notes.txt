@@ -64,5 +64,10 @@ from pythonds.basic.stack import Stack
 
 s=Stack()
 
+10 + 3 * 5 / (16 - 4 )
+10 + 3 * 5 / 16 4 -
+10 + 3 5 * / 16 4 -
+10 + 3 5 * 16 4 - /
+10 3 5 * 16 4 - / +
 
 
